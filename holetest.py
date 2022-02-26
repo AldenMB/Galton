@@ -4,12 +4,12 @@ A block to check the sizes of the holes for good fit.
 import cadquery as cq
 import numpy as np
 
-screw_sizes = 2.5 + np.arange(10)/10
-pin_sizes = 0.75 + np.arange(10)/20
+screw_sizes = 1.5 + np.arange(10)/10
+pin_sizes = 1 + np.arange(10)/20
 
-block = cq.Workplane().box(42, 10, 4)
+block = cq.Workplane().box(36, 10, 4)
 
-placements = np.linspace(-18, 18, 10)
+placements = np.linspace(-14, 14, 10)
 
 for i, (x, screw, pin) in enumerate(zip(placements, screw_sizes, pin_sizes)):
     block = (block

@@ -7,8 +7,8 @@ from math import sqrt, cos, sin, tan, pi
 
 INCH = 25.4
 
-pin = ns(diameter = 1, length=0.5*INCH)
-screw = ns(diameter = 3, length= 0.25*INCH)#measure this
+pin = ns(diameter = 1.2, length=0.5*INCH)
+screw = ns(diameter = 2.3, length= 10.5)
 
 thickness = 2 + max(pin.length, screw.length)
 depth = 4.5
@@ -18,7 +18,7 @@ gate = ns(thickness = 1.5, height = 60)
 
 border = 8
 
-height = 220
+height = 8.5*INCH
 width = 34 * spacing + 2 * border
 
 
@@ -47,8 +47,7 @@ galton = galton.edges("|Z exc >Y exc <Y").edges("not <Y").fillet(spacing)
 galton = (galton
           .faces('>Z')
           .workplane()
-          .rect(width-border*1.5, height-border*1.5, forConstruction=True)
-          .vertices()
+          .rarray(width-border*1.5, (height-border*1.5)/2, 2, 3)
           .hole(screw.diameter, screw.length)
           )
 
