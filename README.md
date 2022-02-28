@@ -22,3 +22,4 @@ If I make this again, I will include the following changes:
 
  - make the angles steeper at the top, so that it is less likely for balls to get stuck.
  - remove the screws, use only superglue to hold it together. With how thin the plastic is we would need many more screws to hold it on firmly, so it just would not be worth it.
+ - use a standard size of acrylic so that it does not need to be trimmed.
